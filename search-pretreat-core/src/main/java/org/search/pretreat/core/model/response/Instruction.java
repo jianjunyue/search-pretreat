@@ -5,9 +5,9 @@ import java.util.Set;
 
 public class Instruction {
 	
-	private String type;
+	private INSTRUCTION_TYPE type;
     private String value;
-    private String restriction;
+    private KEYWORD_RESTRICTION restriction;
 	private String restriction2;	// 二级品类筛选，"-"开头为过滤，null为没有限制
 	private boolean isAtomicWord;	// query必须被连续命中
 	private boolean isRedPacket;
@@ -16,10 +16,10 @@ public class Instruction {
 	private CategoryIntent categoryIntent;
 	private String infoString;		// 可以临时存些乱七八糟的东西
     
-	public String getType() {
+	public INSTRUCTION_TYPE getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType(INSTRUCTION_TYPE type) {
 		this.type = type;
 	}
 	public String getValue() {
@@ -28,10 +28,10 @@ public class Instruction {
 	public void setValue(String value) {
 		this.value = value;
 	}
-	public String getRestriction() {
+	public KEYWORD_RESTRICTION getRestriction() {
 		return restriction;
 	}
-	public void setRestriction(String restriction) {
+	public void setRestriction(KEYWORD_RESTRICTION restriction) {
 		this.restriction = restriction;
 	}
 	public String getRestriction2() {
